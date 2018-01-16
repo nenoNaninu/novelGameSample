@@ -11,7 +11,7 @@ public class NovelGameController  implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        model.clicked(e);
     }
 
     @Override
