@@ -13,13 +13,7 @@ public class NovelGameModel extends Observable implements Runnable{
     }
 
     void clicked(MouseEvent mouseEvent) {
-        if(workingFlag){
-            return;
-        }else{
-            workingFlag = true;
-            //ここにいろいろ書いていく感じ。
-
-        }
+        this.currentScreen.onClicked();
     }
 
     void onTick() {

@@ -1,15 +1,14 @@
 import java.awt.*;
 
-public class TitleScreen extends Screen{
+public class SelectScreen extends Screen {
 
-    private Screen nextScreen;
-
-    public TitleScreen() {
+    public SelectScreen() {
         this.nextScreen = this;
     }
+
     @Override
     public Screen getNextScreen() {
-        return this.nextScreen;
+        return null;
     }
 
     @Override
@@ -24,6 +23,6 @@ public class TitleScreen extends Screen{
 
     @Override
     public void onClicked() {
-        nextScreen = new ScenarioScreen();
+
     }
 }

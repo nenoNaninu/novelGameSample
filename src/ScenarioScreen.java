@@ -1,12 +1,13 @@
 import java.awt.*;
 
-public class TitleScreen extends Screen{
+public class ScenarioScreen extends Screen {
 
-    private Screen nextScreen;
+    private boolean workingFlag = false;
 
-    public TitleScreen() {
+    public ScenarioScreen() {
         this.nextScreen = this;
     }
+
     @Override
     public Screen getNextScreen() {
         return this.nextScreen;
@@ -19,11 +20,15 @@ public class TitleScreen extends Screen{
 
     @Override
     public void onTick() {
+        if(this.workingFlag){
 
+        }
     }
 
     @Override
     public void onClicked() {
-        nextScreen = new ScenarioScreen();
+        if(!workingFlag){
+            this.workingFlag = true;
+        }
     }
 }
