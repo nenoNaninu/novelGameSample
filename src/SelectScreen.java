@@ -17,12 +17,17 @@ public class SelectScreen extends Screen {
     }
 
     @Override
-    public void onTick() {
-
+    public boolean onTick() {
+        return false;
     }
 
     @Override
     public void onClicked() {
+
+    }
+
+    @Override
+    public void drawViewImg(Graphics g) {
 
     }
 }

@@ -7,6 +7,7 @@ public class NovelGameController  implements MouseListener{
 
     public NovelGameController(NovelGameModel model) {
         this.model = model;
+
     }
 
     @Override

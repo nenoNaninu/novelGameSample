@@ -1,6 +1,6 @@
 public class FpsKeeper {
     long frameStartTime = 0;
-    private final long requireWaitTime = 16;
+    private final long requireWaitTime = 40;
 
     public FpsKeeper() { }
 
