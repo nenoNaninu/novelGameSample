@@ -23,10 +23,6 @@ public class TitleScreen extends Screen{
         return this.nextScreen;
     }
 
-    @Override
-    public void paint(Graphics g) {
-
-    }
 
     @Override
     public boolean onTick() {
@@ -36,7 +32,7 @@ public class TitleScreen extends Screen{
 
     @Override
     public void onClicked() {
-        nextScreen = new ScenarioScreen();
+        nextScreen = new ScenarioScreen("prologue.txt");
     }
 
     @Override
