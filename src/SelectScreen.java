@@ -1,33 +1,35 @@
 import java.awt.*;
 
-public class SelectScreen extends Screen {
+public class SelectScreen extends Screen
+{
 
-    public SelectScreen() {
+    public SelectScreen()
+    {
         this.nextScreen = this;
     }
 
     @Override
-    public Screen getNextScreen() {
+    public Screen getNextScreen()
+    {
         return null;
     }
 
-    @Override
-    public void paint(Graphics g) {
-
-    }
 
     @Override
-    public boolean onTick() {
+    public boolean onTick()
+    {
         return false;
     }
 
     @Override
-    public void onClicked() {
+    public void onClicked()
+    {
 
     }
 
     @Override
-    public void drawViewImg(Graphics g) {
+    public void drawViewImg(Graphics g)
+    {
 
     }
 }
