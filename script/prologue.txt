@@ -1,4 +1,4 @@
-@character gakuseiSmatphone.png left
+@character gakuseiSmatphone.png right
 @backGroundImg gakuseibeya.jpg
 @start
 むく…

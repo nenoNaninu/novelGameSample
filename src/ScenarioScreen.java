@@ -51,7 +51,7 @@ public class ScenarioScreen extends Screen
 
             if (str != null)
             {
-                this.scenarioReader.readNext();
+                this.scenarioReader.readNextLine();
                 if (str[0].equals("backGroundImg"))
                 {
                     if (str.length == 2)
@@ -130,6 +130,9 @@ public class ScenarioScreen extends Screen
             this.scenarioReader.onTick();
             String displayStr = scenarioReader.getDisplaytStr();
             this.textWindow.setText(displayStr);
+            if(this.scenarioReader.isFinishReadLine()){
+                this.workingFlag = false;
+            }
         }
         return false;
     }
@@ -142,6 +145,7 @@ public class ScenarioScreen extends Screen
             this.scenarioReader.onClicked();
             //制御文が来た時にいろいろ制御する処理を書く。
             executeCtrlStatement();
+
             this.workingFlag = true;
         }
         else

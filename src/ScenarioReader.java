@@ -11,6 +11,7 @@ public class ScenarioReader
     private String lineString;
     StringCharacterIterator textIterator;
     private String displayStr = "";
+    private boolean isFinishReadLine = false;
 
     public ScenarioReader(String scriptName) throws FileNotFoundException
     {
@@ -43,6 +44,8 @@ public class ScenarioReader
         if (next != CharacterIterator.DONE)
         {
             this.displayStr += next;
+        }else{
+            this.isFinishReadLine = true;
         }
     }
 
@@ -60,7 +63,7 @@ public class ScenarioReader
         }
     }
 
-    public void readNext()
+    public void readNextLine()
     {
         if (this.scanner.hasNext())
         {
@@ -72,5 +75,9 @@ public class ScenarioReader
     public String getDisplaytStr()
     {
         return this.displayStr;
+    }
+
+    public boolean isFinishReadLine(){
+        return this.isFinishReadLine;
     }
 }
