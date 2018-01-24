@@ -13,11 +13,11 @@ public class DisplayedCharacter
     public DisplayedCharacter(String pos)
     {
         this.isDisplay = false;
-        if (pos == "center")
+        if (pos.equals("center"))
         {
             charaPos = CharaPos.Center;
         }
-        else if (pos == "light")
+        else if (pos.equals("right"))
         {
             charaPos = CharaPos.Right;
         }
@@ -56,17 +56,20 @@ public class DisplayedCharacter
     {
         if (isDisplay)
         {
-            if (this.charaPos == CharaPos.Right)
+            int imgWidth = this.characterImg.getWidth(null);
+
+            if (this.charaPos == CharaPos.Left)
             {
-                g.drawImage(this.characterImg, 480, 360, null);
+
+                g.drawImage(this.characterImg, 1920/8 - imgWidth/2, 360, null);
             }
-            else if (this.charaPos == CharaPos.Left)
+            else if (this.charaPos == CharaPos.Right)
             {
-                g.drawImage(this.characterImg, 1440, 360, null);
+                g.drawImage(this.characterImg, 1920/8*6 - imgWidth/2, 360, null);
             }
             else
             {
-                g.drawImage(this.characterImg, 1920 / 2, 360, null);
+                g.drawImage(this.characterImg, 1920 / 2 - imgWidth/2, 360, null);
             }
         }
     }

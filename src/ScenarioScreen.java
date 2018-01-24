@@ -128,7 +128,7 @@ public class ScenarioScreen extends Screen
         if (this.workingFlag)
         {
             this.scenarioReader.onTick();
-            String displayStr = scenarioReader.getDisplaytStr();
+            String displayStr = scenarioReader.getDisplayStr();
             this.textWindow.setText(displayStr);
             if(this.scenarioReader.isFinishReadLine()){
                 this.workingFlag = false;

@@ -17,6 +17,8 @@ public class TextWindow
     void setText(String text)
     {
         this.text = text;
+        this.textLine1 = "";
+        this.textLine2 = "";
         if (this.text.length() < 30)
         {
             this.textLine1 = this.text;
