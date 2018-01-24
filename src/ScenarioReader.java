@@ -33,13 +33,16 @@ public class ScenarioReader
     {
         if (this.scanner.hasNext())
         {
+            this.displayStr= "";
             this.lineString = this.scanner.nextLine();
             this.textIterator = new StringCharacterIterator(lineString);
+            this.isFinishReadLine = false;
         }
     }
 
     public void onTick()
     {
+        System.out.println("reader onTick");
         char next = this.textIterator.next();
         if (next != CharacterIterator.DONE)
         {
